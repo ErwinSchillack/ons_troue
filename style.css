@@ -1,0 +1,57 @@
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px; /* Adjust based on desired maximum width */
+  height: 500px; /* Adjust based on desired height */
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background-color: #f3f3f3; /* Optional: Set a neutral background color */
+}
+
+/* Slides */
+.slide {
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100%;
+}
+
+/* Images within slides */
+.slide img {
+  width: 100%; /* Full width of the slide */
+  height: 100%; /* Full height of the slide */
+  object-fit: cover; /* Cover the slide area, might crop some parts */
+}
+
+/* Navigation arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centers the arrow vertically */
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+}
+
+.next {
+  right: 0; /* Places the 'next' arrow on the right */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0; /* Places the 'prev' arrow on the left */
+  border-radius: 0 3px 3px 0;
+}
+
+/* Adding fade-in effect */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
